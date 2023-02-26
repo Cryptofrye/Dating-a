@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:background="@color/colorPageBackground" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container_body" >
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_credits"
+                        android:textColor="@color/colorTitle"
+                        android:id="@+id/labelCredits"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_credits_desc"
+                        android:textColor="@color/colorSubTitle"
+                        android:id="@+id/labelCreditsDesc"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_buy_credits"
+                        android:id="@+id/getCreditsBtn"
+                        android:textColor="@color/white"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:background="@drawable/button_primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorSeparator"
+                        android:id="@+id/linearLayout6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/ghostModeImage"
+                        app:srcCompat="@drawable/ic_ghost"
+                        app:tint="@color/colorIconTint" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_ghost_mode"
+                            android:textColor="@color/colorTitle"
+                            android:id="@+id/labelGhostMode"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_ghost_mode_desc"
+                            android:id="@+id/labelGhostModeDesc"
+                            android:textColor="@color/colorSubTitle"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_ghost_mode_enabled"
+                            android:id="@+id/labelGhostModeStatus"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/colorAccent" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_enable"
+                            android:id="@+id/ghostModeBtn"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_primary"
+                            android:textStyle="bold"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:padding="10dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="right" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator"
+                    android:id="@+id/separator2"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" >
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/verifiedBadgeImage"
+                        app:srcCompat="@drawable/ic_verified_badge"
+                        app:tint="@color/colorIconTint" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_verified_badge"
+                            android:textColor="@color/colorTitle"
+                            android:id="@+id/labelVerifiedBadge"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_verified_badge_desc"
+                            android:textColor="@color/colorSubTitle"
+                            android:id="@+id/labelVerifiedBadgeDesc"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_verified_badge_enabled"
+                            android:id="@+id/labelVerifiedBadgeStatus"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/colorAccent" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_enable"
+                            android:id="@+id/verifiedBadgeBtn"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_primary"
+                            android:textStyle="bold"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:padding="10dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator"
+                    android:id="@+id/separator_pro_mode"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" >
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/proModeImage"
+                        app:srcCompat="@drawable/ic_pro_account"
+                        app:tint="@color/colorIconTint" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/labelProMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_pro_mode"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_pro_mode_desc"
+                            android:textColor="@color/colorSubTitle"
+                            android:id="@+id/labelProModeDesc"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_pro_mode_enabled"
+                            android:id="@+id/labelProModeStatus"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/colorAccent" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_enable"
+                            android:id="@+id/proModeBtn"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_primary"
+                            android:textStyle="bold"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:padding="10dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator"
+                    android:id="@+id/separator3"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" >
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/disableAdsImage"
+                        app:srcCompat="@drawable/ic_disable_ads"
+                        app:tint="@color/colorIconTint" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_disable_ads"
+                            android:textColor="@color/colorTitle"
+                            android:id="@+id/labelDisableAds"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_disable_ads_desc"
+                            android:textColor="@color/colorSubTitle"
+                            android:id="@+id/labelDisableAdsDesc"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_disable_ads_enabled"
+                            android:id="@+id/labelDisableAdsStatus"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginBottom="8dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_enable"
+                            android:id="@+id/disableAdsBtn"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_primary"
+                            android:textStyle="bold"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:padding="10dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/postSeparatorLine"
+                    android:id="@+id/separator4"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/messagePackageContainer"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" >
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/messagePackageImage"
+                        app:srcCompat="@drawable/ic_message_package"
+                        app:tint="@color/colorIconTint" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_message_package"
+                            android:textColor="@color/colorTitle"
+                            android:id="@+id/labelMessagePackage"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_upgrades_message_package_desc"
+                            android:textColor="@color/colorSubTitle"
+                            android:id="@+id/labelMessagePackageDesc"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_disable_ads_enabled"
+                            android:id="@+id/labelMessagePackageStatus"
+                            android:textSize="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginBottom="8dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/action_buy"
+                            android:id="@+id/messagePackageBtn"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_primary"
+                            android:textStyle="bold"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:padding="10dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

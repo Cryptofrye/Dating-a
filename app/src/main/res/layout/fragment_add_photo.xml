@@ -1,0 +1,191 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical" >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/nested_view" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/moderation_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPageBackground" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_middle"
+                    android:textColor="@color/colorIconTint"
+                    android:background="@color/colorCardBackground"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/msg_gallery_moderation_notice"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/media_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/img_dim" >
+
+                    <ImageView
+                        android:id="@+id/thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="@color/overlay_dark_10"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_view"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <ImageView
+                        android:id="@+id/action_add"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_plus"
+                        app:tint="@color/colorIconTint" />
+
+                    <ImageButton
+                        android:id="@+id/delete_button"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@android:color/white" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSeparator"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mode_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:minHeight="?attr/actionBarSize"
+                    android:paddingHorizontal="@dimen/spacing_large" >
+
+                    <TextView
+                        android:id="@+id/mode_panel_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_photo_privacy"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorTitle"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/mode_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:checked="true"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSeparator"/>
+
+            <github.ankushsachdeva.emojicon.EmojiconEditText
+                android:id="@+id/text_editor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="150dp"
+                android:hint="@string/placeholder_comment"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:gravity="start|top"
+                android:background="@null"
+                android:maxLength="1000"
+                android:textSize="20sp"
+                emojicon:emojiconSize="24dp"
+                android:padding="@dimen/spacing_xmedium" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/RippleStyleBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/publish_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_create"
+                android:background="@color/colorPrimaryButton"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

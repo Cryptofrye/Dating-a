@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:key="settings_preference_screen">
+
+    <PreferenceCategory
+        app:key="header_general"
+        app:title="@string/settings_header_general"
+        app:iconSpaceReserved="false">
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="allowMessages"
+            app:title="@string/settings_allow_messages"
+            app:summary="@string/settings_allow_messages_summary">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="allowPhotosComments"
+            app:title="@string/settings_allow_comments_to_photos">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="viewCircleItems"
+            app:title="@string/settings_view_circle_items">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            app:key="nightTheme"
+            app:title="@string/settings_night_mode_label"
+            app:summary="@string/settings_night_mode_summary">
+        </CheckBoxPreference>
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_push_notifications"
+            app:title="@string/settings_notifications" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_privacy"
+            app:title="@string/settings_privacy" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_change_password"
+            app:title="@string/settings_change_password"
+            app:enabled="true"
+            app:summary="" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_deactivate_account"
+            app:title="@string/settings_deactivate_account"
+            app:enabled="true"
+            app:summary="" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_referrals_list"
+            app:title="@string/settings_view_referrals_list" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_blocked_list"
+            app:title="@string/settings_view_blocked_list" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_balance"
+            app:title="@string/settings_balance"
+            app:summary="@string/settings_balance_summary" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_balance_history"
+            app:title="@string/settings_view_balance_history" />
+
+        <Preference
+            app:key="settings_services"
+            app:title="@string/settings_services"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_services_summary" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_otp_verification"
+            app:title="@string/settings_view_otp_verification"
+            app:summary="@string/settings_view_otp_verification_summary" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="settings_language"
+            app:title="@string/settings_language_label"
+            app:summary="@string/settings_language_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="header_about"
+        app:iconSpaceReserved="false"
+        app:title="@string/settings_header_about">
+
+        <Preference
+            app:key="settings_terms"
+            app:title="@string/settings_terms"
+            app:iconSpaceReserved="false"
+            app:summary="" />
+
+        <Preference
+            app:key="settings_thanks"
+            app:title="@string/settings_thanks"
+            app:iconSpaceReserved="false"
+            app:summary="" />
+
+        <Preference
+            app:key="settings_version"
+            app:title="@string/settings_version"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_copyright_info" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="header_others"
+        app:iconSpaceReserved="false"
+        app:title="@string/settings_header_others">
+
+        <Preference
+            app:key="settings_logout"
+            app:title="@string/settings_logout"
+            app:enabled="true"
+            app:iconSpaceReserved="false"
+            app:summary="" />
+
+        <Preference
+            app:key="settings_contact_us"
+            app:title="@string/settings_contact_us"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_contact_us_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

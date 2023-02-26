@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/profileRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp">
+
+                    <ImageView
+                        android:id="@+id/profileCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/profile_default_cover" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_xlarge">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_large"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profilePhoto"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/profile_default_photo"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="1dp"
+                                app:civ_shadow="false"
+                                app:civ_shadow_radius="0" />
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profileProIcon"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="-35dp"
+                                android:layout_marginRight="35dp"
+                                android:src="@drawable/ic_pro_mode"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="1dp"
+                                app:civ_shadow="false"
+                                app:civ_shadow_radius="0" />
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profileIcon"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="-35dp"
+                                android:src="@drawable/ic_verified"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="1dp"
+                                app:civ_shadow="false"
+                                app:civ_shadow_radius="0" />
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/feelingIcon"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_marginTop="-25dp"
+                                android:src="@drawable/mood"
+                                app:civ_border="true"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="1dp"
+                                app:civ_shadow="false"
+                                app:civ_shadow_radius="0" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:id="@+id/profileFullname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="2"
+                                    android:shadowDy="2"
+                                    android:shadowRadius="2"
+                                    android:text="Fullname"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/profileOnlineIcon"
+                                    android:layout_width="15px"
+                                    android:layout_height="15px"
+                                    android:layout_marginLeft="8dp"
+                                    android:tint="@color/green"
+                                    app:srcCompat="@drawable/ic_online" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/profileUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:shadowColor="@color/black"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:text="username"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/profileLocationContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="@dimen/spacing_mlarge"
+                                    android:tint="@color/white"
+                                    app:srcCompat="@drawable/ic_pin" />
+
+                                <TextView
+                                    android:id="@+id/profileLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="2"
+                                    android:shadowDy="2"
+                                    android:shadowRadius="2"
+                                    android:text="San Francisco, CA"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorSeparator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/profileMessageBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_primary"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/action_message"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/profileActionBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_primary"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/action_add_to_friends"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileInfoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/profileJoinDateContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileJoinDateImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_join_date"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileJoinDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="01.01.2017"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileBirthDateContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileBirthImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_birthday"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileBirthDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="01.01.2017"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileGenderContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileGenderImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_gender"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="Gender"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileSexOrientationContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileSexOrientationImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_heterosexual"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileSexOrientation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="@string/label_sex_orientation"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileAgeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileAgeImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_age"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="@string/label_age"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileHeightContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileHeightImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_height"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="@string/label_height"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileWeightContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileWeightImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_weight"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="@string/label_weight"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileRelationshipStatusContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileRelationshipStatusImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileRelationshipStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="RelationshipStatus"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profilePoliticalViewsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profilePoliticalViewsImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profilePoliticalViews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="PoliticalViews"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileWorldViewContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileWorldViewImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileWorldView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="WorldView"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profilePersonalPriorityContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profilePersonalPriorityImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profilePersonalPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="PersonalPriority"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileImportantInOthersContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/profileImportantInOthersImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileImportantInOthers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="ImportantInOthers"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileSmokingViewsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileSmokingViewsImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_smoking"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileSmokingViews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="SmokingViews"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileAlcoholViewsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileAlcoholViewsImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_alcohol"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileAlcoholViews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="AlcoholViews"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileProfileLookingContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileProfileLookingImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_feature"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileProfileLooking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="ProfileLooking"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileGenderLikeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileGenderLikeImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_gender_like"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileGenderLike"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="GenderLike"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileStatusContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileStatusImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_quote"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="About me. My Bio"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/profileFacebookContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileFacebookImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_website"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileFacebookUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="www.facebook.com/mypage"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/profileSiteContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/profileSiteImage"
+                            android:layout_width="@dimen/spacing_mlarge"
+                            android:layout_height="@dimen/spacing_mlarge"
+                            android:layout_margin="@dimen/spacing_middle"
+                            app:srcCompat="@drawable/ic_website"
+                            app:tint="@color/colorIconTint" />
+
+                        <TextView
+                            android:id="@+id/profileSiteUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/spacing_medium"
+                            android:text="www.mywebsite.com"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSubTitle" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/friendsSpotlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/friendsSpotlightTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/label_friends"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorTitle" />
+
+                            <Button
+                                android:id="@+id/friendsSpotlightMoreBtn"
+                                style="@style/Base.Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="@string/action_see_all" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/friendsSpotlightRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spotlight_item_size" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/likesSpotlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/likesSpotlightTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/label_likes"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorTitle" />
+
+                            <Button
+                                android:id="@+id/likesSpotlightMoreBtn"
+                                style="@style/Base.Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="@string/action_see_all" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/likesSpotlightRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spotlight_item_size" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/giftsSpotlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/giftsSpotlightTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/label_gifts"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorTitle" />
+
+                            <Button
+                                android:id="@+id/giftsSpotlightMoreBtn"
+                                style="@style/Base.Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="@string/action_see_all" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/giftsSpotlightRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spotlight_item_size" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorSeparator" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/ad_item" />
+
+                <LinearLayout
+                    android:id="@+id/profileCountersContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="70dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/spacing_middle"
+                    android:paddingBottom="@dimen/spacing_middle">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/profileItemsBtn"
+                        style="@style/MyRippleStyleDark"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/profileItemsCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.2 K"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/colorTitle" />
+
+                            <TextView
+                                android:id="@+id/profileItemsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_photos"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorSubTitle" />
+                        </LinearLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/profileFriendsBtn"
+                        style="@style/MyRippleStyleDark"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/profileFriendsCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="293"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/colorTitle" />
+
+                            <TextView
+                                android:id="@+id/profileFriendsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_friends"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorSubTitle" />
+                        </LinearLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/profileLikesBtn"
+                        style="@style/MyRippleStyleDark"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/profileLikesCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="57"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/colorTitle" />
+
+                            <TextView
+                                android:id="@+id/profileLikesLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_likes"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorSubTitle" />
+                        </LinearLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/profileGiftsBtn"
+                        style="@style/MyRippleStyleDark"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/profileGiftsCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="57"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="@color/colorTitle" />
+
+                            <TextView
+                                android:id="@+id/profileGiftsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_gifts"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/colorSubTitle" />
+                        </LinearLayout>
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorSeparator" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/profileErrorScreen"
+        android:longClickable="false"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_data_loading"
+            android:id="@+id/profileErrorScreenMsg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:textSize="18dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/profileDisabledScreen"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:id="@+id/profileDisabledScreenContent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_account_disabled"
+                android:id="@+id/profileDisabledScreenMsg"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/profileLoadingScreen"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileLoadingScreenProgressBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

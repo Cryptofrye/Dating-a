@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowInfo"
+        android:title="@string/settings_privacy_info">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowGallery"
+        android:title="@string/settings_privacy_galley">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowFriends"
+        android:title="@string/settings_privacy_friends">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowLikes"
+        android:title="@string/settings_privacy_likes">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowGifts"
+        android:title="@string/settings_privacy_gifts">
+    </CheckBoxPreference>
+
+</PreferenceScreen>

@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "234234234234",
+    "firebase_url": "https://dating-app-34345.firebaseio.com",
+    "project_id": "dating-app-34345",
+    "storage_bucket": "dating-app-34345.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234234234234:android:fc360c3ef845a587c5485def",
+        "android_client_info": {
+          "package_name": "app.manager.dating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234234234234-n9rvrf1d8uv97poadfg5a06r9d5tpsi0eds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFMrt3QXZpR7nq6csRstT8DDl0_0Irt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234234234234-n69u5r270cukdfgjfv1tc8eruvi5ov94n5j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "234234234234-mnd6qantuaedfgb2bhi8hqpe6mo41kt0qr0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.ifsoft.mydating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234234234234:android:8bf874083ff771ae485def",
+        "android_client_info": {
+          "package_name": "app.manager.mydating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234234234234-n9rvrf1d8uv97pfoa5a06r9d5tpsi0eds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFMrt3QXZpsR7nq6csRstT8DDl0_0Irt938"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234234234234-n69u5sr270cukjfv1tc8erfuvi5ov94n5j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "234234234234-mnd6qantuaeb2fbhi8hqpe6mo41kt0qr0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.ifsoft.mydating"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234234234234:android:ab7b1fcdff269e7fd",
+        "android_client_info": {
+          "package_name": "com.raccoonsquare.dating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234234234234-9n7dgcmh8qs4db8kj80gl5sph1aldsgnq.apps.googleusefrcontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raccoonsquare.dating",
+            "certificate_hash": "06eebf1081836523sb23b47413dfe5a04b5f00ec66"
+          }
+        },
+        {
+          "client_id": "234234234234-acp8h4q834c0je7ope4bejlj89r9j6k3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raccoonsquare.dating",
+            "certificate_hash": "497d6b9cf668ad5d64b7320aa7148fsf706686ca51"
+          }
+        },
+        {
+          "client_id": "234234234234-brf9g1n934iqf48s5a77v1pjjv43ufe9r6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raccoonsquare.dating",
+            "certificate_hash": "5e5ef4b0d9e2356605620b3c8aa57dccf5071315c"
+          }
+        },
+        {
+          "client_id": "234234234234-ua8sods6cr853cs3c4j93snnjuldm2hmc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raccoonsquare.dating",
+            "certificate_hash": "0e85a218010de852f8d05fbd8e36298aa78bd55eb"
+          }
+        },
+        {
+          "client_id": "234234234234-vjen6gp6hf5nvq08nco72igj2esa9oee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raccoonsquare.dating",
+            "certificate_hash": "3becfbb72be6f6f8fc6f65c27b6a8e9db11dae8a5"
+          }
+        },
+        {
+          "client_id": "234234234234-n9rvrf1d8uv97poa5a06r9ds5tpsi0eds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFMrt3QXZpsR7nq6csRs3tT8DDl0_0Irt98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234234234234-n69u5r27a0cukjfv1tcf8eruvi5ov94n5j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "234234234234-mnd6qantuaefb2bhi8hqpe6mo41kt0qr0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.ifsoft.mydating"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

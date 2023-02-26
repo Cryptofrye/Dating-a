@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowLikesGCM"
+        android:title="@string/settings_notifications_likes">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowMatchesGCM"
+        android:title="@string/settings_notifications_matches">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowFollowersGCM"
+        android:title="@string/settings_notifications_friends">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowMessagesGCM"
+        android:title="@string/settings_notifications_messages">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowGiftsGCM"
+        android:title="@string/settings_notifications_gifts">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        app:iconSpaceReserved="false"
+        android:key="allowCommentsGCM"
+        android:title="@string/settings_notifications_comments">
+    </CheckBoxPreference>
+
+</PreferenceScreen>
