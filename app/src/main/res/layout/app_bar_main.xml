@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.main.MainActivity">
+
+    <include layout="@layout/content_main" />
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_menu" />
+
+            <ImageView
+                android:id="@+id/gps"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/gps"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrLocationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_14sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_14sdp"
+                android:paddingBottom="@dimen/_7sdp">
+
+                <TextView
+                    android:id="@+id/lblLocationType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:gravity="start"
+                    android:text="@string/pick_up"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/lblLocationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:text="George Crescent, Ciccone NT 0870, Australia"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_14sdp"
+                android:background="@color/grey" />
+
+            <ImageView
+                android:id="@+id/navigation_img"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:contentDescription="@string/app_name"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_navigation"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lnrServicePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nav_header"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cancel_ride_color"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@color/btn_color">
+
+                    <ImageView
+                        android:id="@+id/backArrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_back_black"
+                        android:tint="@color/white" />
+
+                    <com.thinkin_service.provider.common.ClanProTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Service Image"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/nav_header"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:elevation="@dimen/_13sdp">
+
+                        <LinearLayout
+                            android:id="@+id/lnrBeforeService"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:visibility="visible">
+
+
+                            <ImageView
+                                android:id="@+id/imgBeforeComments"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:tint="@color/btn_color"
+                                android:visibility="gone" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgBeforeService"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_80sdp"
+                                android:layout_weight="1"
+                                android:background="@android:color/white"
+                                android:src="@drawable/no_image"
+                                tools:ignore="ContentDescription" />
+
+                            <com.thinkin_service.provider.common.ClanProTextView
+                                android:id="@+id/lblBeforeService"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="@string/before_service"
+                                android:textSize="@dimen/_16sdp"
+                                android:visibility="visible" />
+
+                            <com.thinkin_service.provider.common.ClanProTextView
+                                android:id="@+id/lblBeforeTxtComment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/cancel_ride_color"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:elevation="@dimen/_13sdp">
+
+                        <LinearLayout
+                            android:id="@+id/lnrAfterService"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <ImageView
+                                android:id="@+id/imgAfterComments"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:tint="@color/btn_color"
+                                android:visibility="gone" />
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgAfterService"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_80sdp"
+                                android:background="@android:color/white"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:src="@drawable/no_image"
+                                tools:ignore="ContentDescription" />
+
+                            <com.thinkin_service.provider.common.ClanProTextView
+                                android:id="@+id/lblAfterService"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="@string/after_service"
+                                android:textSize="@dimen/_16sdp"
+                                android:visibility="visible" />
+
+                            <com.thinkin_service.provider.common.ClanProTextView
+                                android:id="@+id/lblAfterTxtComment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:textColor="@color/cancel_ride_color"
+                                android:textSize="@dimen/_14sdp" />
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <com.thinkin_service.provider.common.ClanProEditText
+                        android:id="@+id/txtServiceComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/review_bg"
+                        android:hint="@string/write_your_comment"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+
+                    <com.thinkin_service.provider.common.ClanProButton
+                        android:id="@+id/btnServiceStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:text="@string/save_after"
+                        android:textColor="@color/btn_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="@dimen/_40sdp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior" />
+
+
+    <!--offline_container-->
+    <FrameLayout
+        android:id="@+id/offline_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true" />
+
+
+</android.support.design.widget.CoordinatorLayout>

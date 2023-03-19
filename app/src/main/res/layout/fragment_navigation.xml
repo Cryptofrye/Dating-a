@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.thinkin_service.provider.ui.fragment.navigation.NavigationFragment">
+
+    <ImageButton
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/button_waze"
+        android:src="@drawable/waze"
+        android:layout_marginBottom="5dp"
+        android:background="@color/blue_grey"/>
+
+    <ImageButton
+        android:id="@+id/button_maps"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/maps"
+        android:background="@color/blue_grey"/>
+</LinearLayout>
+
+
